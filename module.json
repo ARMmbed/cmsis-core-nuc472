@@ -1,0 +1,24 @@
+{
+  "name": "cmsis-core-nuc472",
+  "version": "1.0.0",
+  "description": "CMSIS Core Implementation for NUC472 MCUs",
+  "private": true,
+  "keywords": [
+    "cmsis",
+    "mbed",
+    "mbed-official"
+  ],
+  "author": "Chun-Chieh Li <ccli8@nuvoton.com>",
+  "repository": {
+    "url": "git@github.com:ARMmbed/cmsis-core-nuc472.git",
+    "type": "git"
+  },
+  "homepage": "https://github.com/ARMmbed/cmsis-core-nuc472",
+  "license": "Apache-2",
+  "extraIncludes": [
+    "cmsis-core-nuc472"
+  ],
+  "dependencies": {
+    "cmsis-core": "*"
+  },
+}
