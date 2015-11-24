@@ -200,7 +200,7 @@ typedef enum IRQn {
     PWM1CH1_IRQn                  = 73,       /*!< PWM 1 Channel 1 Interrupt                        */
     PWM1CH2_IRQn                  = 74,       /*!< PWM 1 Channel 2 Interrupt                        */
     PWM1CH3_IRQn                  = 75,       /*!< PWM 1 Channel 3 Interrupt                        */
-    PWM1CHCH4_IRQn                = 76,       /*!< PWM 1 Channel 4 Interrupt                        */
+    PWM1CH4_IRQn                  = 76,       /*!< PWM 1 Channel 4 Interrupt                        */
     PWM1CH5_IRQn                  = 77,       /*!< PWM 1 Channel 5 Interrupt                        */
     PWM1_BRK_IRQn                 = 78,       /*!< PWM 1 Break Interrupt                            */
     QEI1_IRQn                     = 79,       /*!< QEI 1  Interrupt                                 */
