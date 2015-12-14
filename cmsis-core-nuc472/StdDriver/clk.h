@@ -60,11 +60,11 @@ extern "C"
 # error "The PLL pre-definitions are only valid when external crystal is 12MHz"
 #endif
 
-#define CLK_PLLCTL_50MHz_HIRC (CLK_PLLCTL_FIN_HIRC | CLK_PLLCTL_NR(13) | CLK_PLLCTL_NF( 59) | CLK_PLLCTL_NO_2) /*!< Predefined PLLCTL setting for 50.1918MHz PLL output with 22.1184MHz IRC  \hideinitializer */
-#define CLK_PLLCTL_48MHz_HIRC (CLK_PLLCTL_FIN_HIRC | CLK_PLLCTL_NR(13) | CLK_PLLCTL_NF(113) | CLK_PLLCTL_NO_4) /*!< Predefined PLLCTL setting for 48.064985MHz PLL output with 22.1184MHz IRC \hideinitializer */
-#define CLK_PLLCTL_36MHz_HIRC (CLK_PLLCTL_FIN_HIRC | CLK_PLLCTL_NR(12) | CLK_PLLCTL_NF( 78) | CLK_PLLCTL_NO_4) /*!< Predefined PLLCTL setting for 35.9424MHz PLL output with 22.1184MHz IRC  \hideinitializer */
-#define CLK_PLLCTL_32MHz_HIRC (CLK_PLLCTL_FIN_HIRC | CLK_PLLCTL_NR( 9) | CLK_PLLCTL_NF( 52) | CLK_PLLCTL_NO_4) /*!< Predefined PLLCTL setting for 31.9488MHz PLL output with 22.1184MHz IRC \hideinitializer */
-#define CLK_PLLCTL_24MHz_HIRC (CLK_PLLCTL_FIN_HIRC | CLK_PLLCTL_NR( 3) | CLK_PLLCTL_NF( 13) | CLK_PLLCTL_NO_4) /*!< Predefined PLLCTL setting for 23.9616MHz PLL output with 22.1184MHz IRC \hideinitializer */
+#define CLK_PLLCTL_50MHz_HIRC (CLK_PLLCTL_PLLSRC_HIRC | CLK_PLLCTL_NR(13) | CLK_PLLCTL_NF( 59) | CLK_PLLCTL_NO_2) /*!< Predefined PLLCTL setting for 50.1918MHz PLL output with 22.1184MHz IRC  \hideinitializer */
+#define CLK_PLLCTL_48MHz_HIRC (CLK_PLLCTL_PLLSRC_HIRC | CLK_PLLCTL_NR(13) | CLK_PLLCTL_NF(113) | CLK_PLLCTL_NO_4) /*!< Predefined PLLCTL setting for 48.064985MHz PLL output with 22.1184MHz IRC \hideinitializer */
+#define CLK_PLLCTL_36MHz_HIRC (CLK_PLLCTL_PLLSRC_HIRC | CLK_PLLCTL_NR(12) | CLK_PLLCTL_NF( 78) | CLK_PLLCTL_NO_4) /*!< Predefined PLLCTL setting for 35.9424MHz PLL output with 22.1184MHz IRC  \hideinitializer */
+#define CLK_PLLCTL_32MHz_HIRC (CLK_PLLCTL_PLLSRC_HIRC | CLK_PLLCTL_NR( 9) | CLK_PLLCTL_NF( 52) | CLK_PLLCTL_NO_4) /*!< Predefined PLLCTL setting for 31.9488MHz PLL output with 22.1184MHz IRC \hideinitializer */
+#define CLK_PLLCTL_24MHz_HIRC (CLK_PLLCTL_PLLSRC_HIRC | CLK_PLLCTL_NR( 3) | CLK_PLLCTL_NF( 13) | CLK_PLLCTL_NO_4) /*!< Predefined PLLCTL setting for 23.9616MHz PLL output with 22.1184MHz IRC \hideinitializer */
 
 /*---------------------------------------------------------------------------------------------------------*/
 /*  PLL2CTL constant definitions.                                                                */
