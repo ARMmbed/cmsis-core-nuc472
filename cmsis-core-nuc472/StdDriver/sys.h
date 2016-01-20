@@ -466,7 +466,7 @@ Example 1: If user want to set PA.0 as SC0_CD in initial function,
 #define SYS_GPC_MFPH_PC9MFP_STADC            (0x1UL<<SYS_GPC_MFPH_PC9MFP_Pos)           /*!< GPC_MFPH PC9 setting for STADC    \hideinitializer */
 #define SYS_GPC_MFPH_PC9MFP_UART2_CTS        (0x2UL<<SYS_GPC_MFPH_PC9MFP_Pos)           /*!< GPC_MFPH PC9 setting for UART2_CTS    \hideinitializer */
 #define SYS_GPC_MFPH_PC9MFP_SC3_RST          (0x3UL<<SYS_GPC_MFPH_PC9MFP_Pos)           /*!< GPC_MFPH PC9 setting for SC3_RST    \hideinitializer */
-#define SYS_GPC_MFPH_PC9MFP_SPI0_SDA         (0x4UL<<SYS_GPC_MFPH_PC9MFP_Pos)           /*!< GPC_MFPH PC9 setting for SPI0_SDA     \hideinitializer */
+#define SYS_GPC_MFPH_PC9MFP_I2C0_SDA         (0x4UL<<SYS_GPC_MFPH_PC9MFP_Pos)           /*!< GPC_MFPH PC9 setting for I2C0_SDA     \hideinitializer */
 #define SYS_GPC_MFPH_PC9MFP_CAP_DATA1        (0x5UL<<SYS_GPC_MFPH_PC9MFP_Pos)           /*!< GPC_MFPH PC9 setting for CAP_DATA1    \hideinitializer */
 #define SYS_GPC_MFPH_PC9MFP_I2C3_SCL         (0x6UL<<SYS_GPC_MFPH_PC9MFP_Pos)           /*!< GPC_MFPH PC9 setting for I2C3_SCL     \hideinitializer */
 #define SYS_GPC_MFPH_PC9MFP_EBI_A22          (0x7UL<<SYS_GPC_MFPH_PC9MFP_Pos)           /*!< GPC_MFPH PC9 setting for EBI_A22    \hideinitializer */
