@@ -19,7 +19,7 @@ uint32_t SystemCoreClock = __HSI;               /*!< System Clock Frequency (Cor
 uint32_t CyclesPerUs      = (__HSI / 1000000);  /*!< Cycles per micro second            */
 uint32_t gau32ClkSrcTbl[] = {__HXT, __LXT, 0, __LIRC, 0, 0, 0, __HIRC}; /*!< System clock source table */
 
-#ifdef TARGET_LIKE_NUC472_DEMO
+#if defined TARGET_LIKE_NUC472_DEMO || defined TARGET_LIKE_NUC472_NUBED
 static void nu_ebi_init(void);
 #endif
 
@@ -110,13 +110,13 @@ void SystemInit (void)
     }
     /*------------------------------------------------------------------------*/
 
-#ifdef TARGET_LIKE_NUC472_DEMO
+#if defined TARGET_LIKE_NUC472_DEMO || defined TARGET_LIKE_NUC472_NUBED
     // NOTE: C-runtime not initialized yet. Ensure no static memory (global variable) are accessed in this function.
     nu_ebi_init();
 #endif
 }
 
-#ifdef TARGET_LIKE_NUC472_DEMO
+#if defined TARGET_LIKE_NUC472_DEMO || defined TARGET_LIKE_NUC472_NUBED
 void nu_ebi_init(void)
 {
     /* Enable IP clock */
