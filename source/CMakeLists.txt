@@ -21,7 +21,7 @@
 # !!! FIXME could also use if(TARGET_LIKE_GCC) / TARGET_LIKE_ARMCC / etc set by
 # the yotta targets, maybe that'd be clearer
 if(${CMAKE_C_COMPILER_ID} STREQUAL GNU)
-    set(STARTUP_ASM "")
+    set(STARTUP_ASM "GCC/startup_NUC472_442.S")
     set(STARTUP_SRC "")
 elseif(${CMAKE_C_COMPILER_ID} STREQUAL ARMCC)
     set(STARTUP_ASM "ARM/startup_NUC472_442.s")

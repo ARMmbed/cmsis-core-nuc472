@@ -39,8 +39,10 @@ static uint32_t g_usbd_CtrlMaxPktSize = 64;
 #ifdef __ICCARM__
 #pragma data_alignment=4
 static uint8_t g_usbd_buf[12];
-#else
+#elif defined (__CC_ARM)
 __align(4) static uint8_t g_usbd_buf[12];
+#elif defined ( __GNUC__ )
+static uint8_t g_usbd_buf[12] __attribute__((aligned (4)));
 #endif
 
 
