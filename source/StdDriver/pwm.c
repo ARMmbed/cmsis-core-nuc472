@@ -136,9 +136,8 @@ uint32_t PWM_ConfigOutputChannel2(PWM_T *pwm,
     }
 
     for(; u8Divider < 17; u8Divider <<= 1) {  // clk divider could only be 1, 2, 4, 8, 16
-        i = (u32PWM_CLock / u32Frequency) / u8Divider;
         // Note: Support frequency < 1
-        i *= u32Frequency2;
+        i = (uint64_t) u32PWM_CLock * u32Frequency2 / u32Frequency / u8Divider;
         // If target value is larger than CNR * prescale, need to use a larger divider
         if(i > (0x10000 * 0x100))
             continue;
