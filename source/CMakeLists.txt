@@ -21,15 +21,15 @@
 # !!! FIXME could also use if(TARGET_LIKE_GCC) / TARGET_LIKE_ARMCC / etc set by
 # the yotta targets, maybe that'd be clearer
 if(${CMAKE_C_COMPILER_ID} STREQUAL GNU)
-    set(STARTUP_ASM "GCC/startup_NUC472_442.S")
-    set(STARTUP_SRC "")
+    set(STARTUP_ASM "")
+    set(STARTUP_SRC "startup_NUC472_442.c")
 elseif(${CMAKE_C_COMPILER_ID} STREQUAL ARMCC)
-    set(STARTUP_ASM "ARM/startup_NUC472_442.s")
-    set(STARTUP_SRC "")
+    set(STARTUP_ASM "")
+    set(STARTUP_SRC "startup_NUC472_442.c")
     
     # unfortunately, for armlink we have to pass the executable startup code as
     # an object file, not as part of an archive.
-    add_library(cmsis-core-nuc472_startupcod OBJECT ${STARTUP_ASM} "mbed_overrides.c")
+    add_library(cmsis-core-nuc472_startupcod OBJECT ${STARTUP_SRC} "mbed_overrides.c")
 
     # This is the "neatest" way of making sure the startup code gets linked
     # into every executable. Needless to say this is, despite its brevity,
@@ -38,8 +38,8 @@ elseif(${CMAKE_C_COMPILER_ID} STREQUAL ARMCC)
         _add_executable(${ARGV} $<TARGET_OBJECTS:cmsis-core-nuc472_startupcod>)
     Endmacro()
 elseif(${CMAKE_C_COMPILER_ID} STREQUAL IAR)
-    set(STARTUP_ASM "IAR/startup_NUC472_442.s")
-    set(STARTUP_SRC "")
+    set(STARTUP_ASM "")
+    set(STARTUP_SRC "startup_NUC472_442.c")
 else()
     set(STARTUP_ASM "")
     set(STARTUP_SRC "")
@@ -50,7 +50,7 @@ enable_language(ASM)
 set_property(SOURCE ${STARTUP_ASM} PROPERTY LANGUAGE ASM)
 
 add_library(cmsis-core-nuc472
-    ${STARTUP_ASM}
+    ${STARTUP_SRC}
     "system_NUC472_442.c"
     "StdDriver/acmp.c"
     "StdDriver/adc.c"
