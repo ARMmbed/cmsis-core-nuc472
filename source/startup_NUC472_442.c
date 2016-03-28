@@ -36,6 +36,8 @@ extern uint32_t __StackTop;
 extern uint32_t __etext;
 extern uint32_t __data_start__;
 extern uint32_t __data_end__;
+extern uint32_t __bss_extern_start__ WEAK;
+extern uint32_t __bss_extern_end__ WEAK;
 
 extern void uvisor_init(void);
 extern void _start(void);
@@ -422,6 +424,15 @@ void Reset_Handler(void)
         }
     }
    
+    /* Initialize .bss.extern section to zero */
+    dst_ind = (uint32_t *) &__bss_extern_start__;
+    dst_end = (uint32_t *) &__bss_extern_end__;
+    if (dst_ind != dst_end) {
+        for (; dst_ind < dst_end;) {
+            *dst_ind ++ = 0;
+        }
+    }
+    
     uvisor_init();
     _start();
 #endif
