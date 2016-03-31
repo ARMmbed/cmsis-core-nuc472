@@ -66,6 +66,8 @@ void SystemInit (void)
                    (3UL << 11*2)  );               /* set CP11 Full Access */
 #endif
 
+    /* The code snippet below is for old-version chip and has potential risk, e.g. program reboots and hangs in it with the call to NVIC_SystemReset(). Remove it for new-version chip. */
+#if 0
     /* ------------------ Release Tamper pin ---------------------------------*/
     /* Waiting for 10kHz clock ready */
     CLK_WaitClockReady(CLK_STATUS_LIRCSTB_Msk);
@@ -109,6 +111,7 @@ void SystemInit (void)
         CLK->APBCLK0 &= ~CLK_APBCLK0_RTCCKEN_Msk; // RTC Clock Disable
     }
     /*------------------------------------------------------------------------*/
+#endif
 
 #if defined TARGET_LIKE_NUC472_DEMO || defined TARGET_LIKE_NUC472_NUBED || defined TARGET_LIKE_NUMBED_NUC472
     // NOTE: C-runtime not initialized yet. Ensure no static memory (global variable) are accessed in this function.
