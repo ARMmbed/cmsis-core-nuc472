@@ -1,6 +1,6 @@
 {
   "name": "cmsis-core-nuc472",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "CMSIS Core Implementation for NUC472 MCUs",
   "keywords": [
     "cmsis",

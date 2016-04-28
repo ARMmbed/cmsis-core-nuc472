@@ -20,4 +20,7 @@
 #include "cmsis-core-nuc472/NUC472_442.h"
 #include "cmsis-core/cmsis_nvic.h"
 
+// Support linker-generated symbol as start of relocated vector table.
+extern uint32_t __start_vector_table__;
+
 #endif
