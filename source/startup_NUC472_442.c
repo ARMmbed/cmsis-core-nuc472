@@ -42,7 +42,9 @@ extern uint32_t __bss_extern_start__ WEAK;
 extern uint32_t __bss_extern_end__ WEAK;
 
 extern void uvisor_init(void);
-extern void _start(void);
+//extern void _start(void);
+extern void __libc_init_array(void);
+extern int main(void);
 #endif
 
 /* Default empty handler */
@@ -445,7 +447,8 @@ void Reset_Handler(void)
     }
     
     uvisor_init();
-    _start();
+    __libc_init_array();
+    main();
 #endif
 
     /* Infinite loop */
